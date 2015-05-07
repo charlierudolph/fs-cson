@@ -12,6 +12,10 @@
     "fs",
     "cson"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlierudolph/fs-cson.git"
+  },
   "author": "Charlie Rudolph",
   "license": "MIT",
   "devDependencies": {
