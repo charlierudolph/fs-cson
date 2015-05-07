@@ -3,15 +3,15 @@
 Read and write CSON to the filesystem
 
 
-### Installation
+## Installation
 
 ```
 npm install fs-cson
 ```
 
-### API
+## API
 
-##### readFile(filePath, callback)
+#### readFile(filePath, callback)
 
 Asynchronously reads the file and parses the contents.
 The callback is passed two arguments `(err, data)`, where data is the parsed object.
@@ -30,12 +30,12 @@ fsCson.readFile 'sample.cson', (err, data) ->
 ```
 
 
-##### readFileSync(filePath)
+#### readFileSync(filePath)
 
 Synchronous version of readFile
 
 
-##### writeFile(filePath, object, callback)
+#### writeFile(filePath, object, callback)
 
 Stringifies the object and then asynchronously writes to a file.
 The callback is passed one argument `(err)`.
@@ -51,6 +51,6 @@ fsCson.writeFile 'sample.cson', {a: 1, b: 2}, (err) ->
 ```
 
 
-##### writeFileSync(filePath)
+#### writeFileSync(filePath)
 
 Synchronous version of readFile
