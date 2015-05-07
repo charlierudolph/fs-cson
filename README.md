@@ -53,4 +53,4 @@ fsCson.writeFile 'sample.cson', {a: 1, b: 2}, (err) ->
 
 #### writeFileSync(filePath)
 
-Synchronous version of readFile
+Synchronous version of writeFile
