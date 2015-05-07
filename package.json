@@ -1,0 +1,30 @@
+{
+  "name": "fs-cson",
+  "version": "0.1.0",
+  "description": "Read and write CSON to the filesystem",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "coffee -co lib/ src/index.coffee",
+    "pretest": "dependency-lint",
+    "test": "mycha"
+  },
+  "keywords": [
+    "fs",
+    "cson"
+  ],
+  "author": "Charlie Rudolph",
+  "license": "MIT",
+  "devDependencies": {
+    "async": "^0.9.0",
+    "chai": "^2.3.0",
+    "coffee-script": "^1.9.2",
+    "dependency-lint": "^1.3.2",
+    "mycha": "^0.8.2",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0",
+    "tmp": "0.0.25"
+  },
+  "dependencies": {
+    "cson-parser": "^1.0.9"
+  }
+}
