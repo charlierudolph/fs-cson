@@ -27,8 +27,28 @@ writeFileSync = (filePath, object) ->
   fs.writeFileSync filePath, _stringifyObject(object)
 
 
+updateFile = (filePath, updater, done) ->
+  readFile filePath, (err, object) ->
+    if err then return done err
+    updatedObject = updater object
+    writeFile filePath, updatedObject, done
+
+
+updateFileSync = (filePath, updater) ->
+  object = readFileSync filePath
+  updatedObject = updater object
+  writeFileSync filePath, updatedObject
+
+
 _stringifyObject = (object) ->
   csonParser.stringify object, null, 2
 
 
-module.exports = {readFile, readFileSync, writeFile, writeFileSync}
+module.exports = {
+  readFile
+  readFileSync
+  updateFile
+  updateFileSync
+  writeFile
+  writeFileSync
+}

@@ -35,6 +35,41 @@ fsCson.readFile 'sample.cson', (err, data) ->
 Synchronous version of readFile
 
 
+#### updateFile(filePath, updater, callback)
+
+Asynchronously reads the file, parses the contents, calls updater, and writes the stringified object.
+`updater` is passed on argument `(data)` and should return the updated data.
+The callback is passed one argument `(err)`.
+
+Example
+```
+# sample.cson
+a: 1
+b: 2
+
+# update.coffee
+fsCson = require 'fs-cson'
+
+updater = (data) ->
+  result = {}
+  for key, value in data
+    result[key] = value * 2
+  result.c = 6
+  result
+
+fsCson.updateFile 'sample.cson', (err, data) ->
+  # sample.cson now has the content
+  # a: 2
+  # b: 4
+  # c: 6
+```
+
+
+#### updateFileSync(filePath)
+
+Synchronous version of updateFile
+
+
 #### writeFile(filePath, object, callback)
 
 Stringifies the object and then asynchronously writes to a file.
