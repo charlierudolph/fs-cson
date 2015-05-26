@@ -1,4 +1,7 @@
 # fs-cson
+[![Build Status](https://img.shields.io/circleci/project/charlierudolph/fs-cson.svg)](https://circleci.com/gh/charlierudolph/fs-cson)
+[![Dependency Status](https://img.shields.io/david/charlierudolph/fs-cson.svg)](https://david-dm.org/charlierudolph/fs-cson)
+[![NPM Version](https://img.shields.io/npm/v/fs-cson.svg)](https://www.npmjs.com/package/fs-cson)
 
 Read and write CSON to the filesystem
 
