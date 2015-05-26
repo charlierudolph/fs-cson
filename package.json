@@ -4,7 +4,7 @@
   "description": "Read and write CSON to the filesystem",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "coffee -co lib/ src/index.coffee",
+    "prepublish": "find ./src -name '*.coffee' -not -name '*_spec.coffee' | xargs coffee -co lib/",
     "pretest": "dependency-lint",
     "test": "mycha"
   },
@@ -19,14 +19,14 @@
   "author": "Charlie Rudolph",
   "license": "MIT",
   "devDependencies": {
-    "async": "^0.9.0",
+    "async": "^1.0.0",
     "chai": "^2.3.0",
     "coffee-script": "^1.9.2",
     "dependency-lint": "^1.3.2",
-    "mycha": "^0.8.2",
+    "mycha": "^0.9.0",
     "sinon": "^1.14.1",
     "sinon-chai": "^2.7.0",
-    "tmp": "0.0.25"
+    "tmp": "0.0.26"
   },
   "dependencies": {
     "cson-parser": "^1.0.9"
