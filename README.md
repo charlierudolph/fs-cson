@@ -22,7 +22,7 @@ The callback is passed two arguments `(err, data)`, where data is the parsed obj
 Synchronous version: `readFileSync(filePath)`
 
 Example
-```
+```coffee
 # sample.cson
 a: 1
 b: 2
@@ -45,7 +45,7 @@ The callback is passed one argument `(err)`.
 Synchronous version: `updateFileSync(filePath, updater)`
 
 Example
-```
+```coffee
 # sample.cson
 a: 1
 b: 2
@@ -76,7 +76,7 @@ The callback is passed one argument `(err)`.
 
 Synchronous version: `writeFileSync(filePath, object)`
 
-```
+```coffee
 # write.coffee
 fsCson = require 'fs-cson'
 
