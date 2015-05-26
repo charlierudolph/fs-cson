@@ -16,6 +16,8 @@ npm install fs-cson
 Asynchronously reads the file and parses the contents.
 The callback is passed two arguments `(err, data)`, where data is the parsed object.
 
+Synchronous version: `readFileSync(filePath)`
+
 Example
 ```
 # sample.cson
@@ -30,16 +32,14 @@ fsCson.readFile 'sample.cson', (err, data) ->
 ```
 
 
-#### readFileSync(filePath)
-
-Synchronous version of readFile
-
-
+---
 #### updateFile(filePath, updater, callback)
 
 Asynchronously reads the file, parses the contents, calls updater, and writes the stringified object.
 `updater` is passed on argument `(data)` and should return the updated data.
 The callback is passed one argument `(err)`.
+
+Synchronous version: `updateFileSync(filePath, updater)`
 
 Example
 ```
@@ -65,15 +65,13 @@ fsCson.updateFile 'sample.cson', (err, data) ->
 ```
 
 
-#### updateFileSync(filePath)
-
-Synchronous version of updateFile
-
-
+---
 #### writeFile(filePath, object, callback)
 
 Stringifies the object and then asynchronously writes to a file.
 The callback is passed one argument `(err)`.
+
+Synchronous version: `writeFileSync(filePath, object)`
 
 ```
 # write.coffee
@@ -84,8 +82,3 @@ fsCson.writeFile 'sample.cson', {a: 1, b: 2}, (err) ->
   # a: 1
   # b: 2
 ```
-
-
-#### writeFileSync(filePath)
-
-Synchronous version of writeFile
