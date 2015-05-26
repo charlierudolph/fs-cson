@@ -60,7 +60,7 @@ updater = (data) ->
   result.c = 6
   result
 
-fsCson.updateFile 'sample.cson', (err, data) ->
+fsCson.updateFile 'sample.cson', (err) ->
   # sample.cson now has the content
   # a: 2
   # b: 4
