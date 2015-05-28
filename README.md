@@ -85,3 +85,11 @@ fsCson.writeFile 'sample.cson', {a: 1, b: 2}, (err) ->
   # a: 1
   # b: 2
 ```
+
+
+---
+#### writeFileSafe(filePath, object, callback)
+
+Same as `writeFile` but creates parent directories if they do not exist.
+
+Synchronous version: `writeFileSafeSync(filePath, object)`

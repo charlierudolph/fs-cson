@@ -1,5 +1,5 @@
-{readFile, readFileSync} = require './read'
-{writeFile, writeFileSync} = require './write'
+{readFile, readFileSync} = require './read_file'
+{writeFile, writeFileSync} = require './write_file'
 
 
 updateFile = (filePath, updater, done) ->
