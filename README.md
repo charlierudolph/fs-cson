@@ -3,7 +3,7 @@
 [![Dependency Status](https://img.shields.io/david/charlierudolph/fs-cson.svg)](https://david-dm.org/charlierudolph/fs-cson)
 [![NPM Version](https://img.shields.io/npm/v/fs-cson.svg)](https://www.npmjs.com/package/fs-cson)
 
-Read and write CSON to the filesystem
+Read and write CSON to the filesystem, require CSON files
 
 
 ## Installation
@@ -32,6 +32,21 @@ fsCson = require 'fs-cson'
 
 fsCson.readFile 'sample.cson', (err, data) ->
   # data will be {a: 1, b: 2}
+```
+
+
+---
+#### register()
+
+Allows cson files to be required.
+
+```coffee
+fsCson = require 'fs-cson'
+fsCson.register()
+
+# or
+
+require 'fs-cson/register'
 ```
 
 

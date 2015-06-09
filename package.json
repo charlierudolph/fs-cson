@@ -2,7 +2,6 @@
   "name": "fs-cson",
   "version": "0.1.3",
   "description": "Read and write CSON to the filesystem",
-  "main": "lib/index.js",
   "scripts": {
     "prepublish": "find ./src -name '*.coffee' -not -name '*_spec.coffee' | xargs coffee -co lib/",
     "pretest": "dependency-lint",
