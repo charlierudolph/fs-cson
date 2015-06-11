@@ -1,6 +1,6 @@
 {
   "name": "fs-cson",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Read and write CSON to the filesystem",
   "scripts": {
     "prepublish": "find ./src -name '*.coffee' -not -name '*_spec.coffee' | xargs coffee -co lib/",
