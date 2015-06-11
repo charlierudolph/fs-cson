@@ -23,10 +23,7 @@ describe 'fsCson', ->
         expect(@err).to.not.exist
 
       it 'writes cson to the filesystem', ->
-        expect(@data).to.eql '''
-          a: 1
-          b: 2
-          '''
+        expect(@data).to.eql 'a: 1\nb: 2\n'
 
     describe 'parent dir does not exist', ->
       beforeEach (done) ->
@@ -40,10 +37,7 @@ describe 'fsCson', ->
         expect(@err).to.not.exist
 
       it 'writes cson to the filesystem', ->
-        expect(@data).to.eql '''
-          a: 1
-          b: 2
-          '''
+        expect(@data).to.eql 'a: 1\nb: 2\n'
 
 
   describe 'writeFileSafeSync', ->
@@ -58,10 +52,7 @@ describe 'fsCson', ->
         ], done
 
       it 'writes cson to the filesystem', ->
-        expect(@data).to.eql '''
-          a: 1
-          b: 2
-          '''
+        expect(@data).to.eql 'a: 1\nb: 2\n'
 
     describe 'parent dir does not exist', ->
       beforeEach (done) ->
@@ -74,7 +65,4 @@ describe 'fsCson', ->
         ], done
 
       it 'writes cson to the filesystem', ->
-        expect(@data).to.eql '''
-          a: 1
-          b: 2
-          '''
+        expect(@data).to.eql 'a: 1\nb: 2\n'

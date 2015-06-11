@@ -51,7 +51,7 @@ describe 'fsCson', ->
         expect(@err).to.not.exist
 
       it 'writes the updated data', ->
-        expect(@data).to.eql 'a: 2\nb: 3'
+        expect(@data).to.eql 'a: 2\nb: 3\n'
 
 
   describe 'updateFileSync', ->
@@ -105,4 +105,4 @@ describe 'fsCson', ->
         expect(@err).to.not.exist
 
       it 'writes the updated data', ->
-        expect(@data).to.eql 'a: 2\nb: 3'
+        expect(@data).to.eql 'a: 2\nb: 3\n'
