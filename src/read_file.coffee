@@ -1,9 +1,9 @@
 csonParser = require 'cson-parser'
-fs = require 'fs'
+fsExtra = require 'fs-extra'
 
 
 readFile = (filePath, done) ->
-  fs.readFile filePath, 'utf8', (err, data) ->
+  fsExtra.readFile filePath, 'utf8', (err, data) ->
     if err then return done err
     try
       result = csonParser.parse data
@@ -15,7 +15,7 @@ readFile = (filePath, done) ->
 
 
 readFileSync = (filePath) ->
-  data = fs.readFileSync filePath, 'utf8'
+  data = fsExtra.readFileSync filePath, 'utf8'
   csonParser.parse data
 
 

@@ -1,13 +1,13 @@
 stringify = require './stringify'
-fs = require 'fs'
+fsExtra = require 'fs-extra'
 
 
 writeFile = (filePath, object, done) ->
-  fs.writeFile filePath, stringify(object), done
+  fsExtra.writeFile filePath, stringify(object), done
 
 
 writeFileSync = (filePath, object) ->
-  fs.writeFileSync filePath, stringify(object)
+  fsExtra.writeFileSync filePath, stringify(object)
 
 
 module.exports = {writeFile, writeFileSync}
