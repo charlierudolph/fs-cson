@@ -1,3 +1,6 @@
+
+> **This repository is archived, if you'd like to fork the repo and take over the node module please contact me**
+
 # fs-cson
 [![Build Status](https://img.shields.io/circleci/project/charlierudolph/fs-cson.svg)](https://circleci.com/gh/charlierudolph/fs-cson)
 [![Dependency Status](https://img.shields.io/david/charlierudolph/fs-cson.svg)](https://david-dm.org/charlierudolph/fs-cson)
